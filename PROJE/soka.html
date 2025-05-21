@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOKA - Saat Mağazası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e8e8e8;
+        }
+        header {
+            background-color: #272626;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #6b6b6b;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;   
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .hero {
+            background-image: url("img/watches_new_09-1.png");
+            color:white;
+            background-repeat: no-repeat;
+            background-attachment:inherit; 
+            background-size: 100% 100%;
+            padding: 225px 55px;
+            text-align: center; 
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 40px 20px;
+        }
+        .product-card {
+            background-color: white; 
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px(255, 255, 255, 0.1);
+            overflow: hidden;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-card img {
+            width: 55%;
+            height: 65%;
+        }
+        .product-card h3 {
+            margin: 15px 0 5px;
+        }
+        .product-card p {
+            color: #acacac;
+            margin: 0 0 10px;
+        }
+        .footer {
+            background-color: #1e1e1e;
+            color: rgb(169, 169, 169);
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .product-card {
+                width: 30%; 
+            }
+        }
+
+    
+        @media (max-width: 767px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-card {
+                width: 80%; 
+            }
+        }
+        .buy-button {
+    background-color: #1e1e1e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #444;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal button {
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SOKA</h1>
+        <p>Şıklığın ve zarafetin zamanı</p>
+    </header>
+
+    <nav>
+        <a href="soka.html">Anasayfa</a>
+        <a href="hakkımızda.html">Hakkımızda</a>
+        <a href="#urunler">Ürünler</a>
+        <a href="blog.html">Blog</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Yeni Sezon Saatler Şimdi SOKA'da</h2>
+        <p>Modern, klasik ve spor saatler bir arada.</p>
+    </div>
+
+    <div id="urunler"class="products">
+        <div class="product-card">
+            <img src="img/61LW+y71dhL.jpg" alt="Saat 1">
+            <h3>SOKA DİJİTAL</h3>
+            <p>₺799</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+        <div class="product-card">
+            <img src="img/elegant-nacar-beyaz-seramik-kadin-kol-saati4516_11900_R3.jpg" alt="Saat 2">
+            <h3>SOKA KADIN</h3>
+            <p>₺1199</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+        <div class="product-card">
+            <img src="img/seiko-spb293j1-presage-erkek-kol-saati-1.png" alt="Saat 3">
+            <h3>SOKA ERKEK</h3>
+            <p>₺649</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img/images (2).jpeg" alt="Saat 4">
+            <h3>SOKA DİJİTAL</h3>
+            <p>₺899</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+        <div class="product-card">
+            <img src="img/klasik-nacar-celik-metal-erkek-kol-saati4412_11193_R5.jpg" alt="Saat 5">
+            <h3>SOKA KADIN</h3>
+            <p>₺1399</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+        <div class="product-card">
+            <img src="img/64ba4580ba574164526527fbfc55a3af5e0f24e3de57c63b6984fceb4839c360.jpg" alt="Saat 6">
+            <h3>SOKA ERKEK</h3>
+            <p>₺599</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img/61LW+y71dhL.jpg" alt="Saat 7">
+            <h3>SOKA DİJİTAL</h3>
+            <p>₺749</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+        <div class="product-card">
+            <img src="img/ozel-setler-nacar-kahverengi-deri-erkek-kol-saati4150_9983_R5.jpg" alt="Saat 8">
+            <h3>SOKA KADIN</h3>
+            <p>₺1049</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+        <div class="product-card">
+            <img src="img/men-858-poedagar-erkek-saat-cover-gold-blue.png" alt="Saat 9">
+            <h3>SOKA ERKEK</h3>
+            <p>₺999</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img/upwatch-upgrade-matte-gold-brown-254_1.jpg" alt="Saat 10">
+            <h3>SOKA DİJİTAL</h3>
+            <p>₺1149</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+        <div class="product-card">
+            <img src="img/dk113829-2-premium-kadin-kol-saati-58224-67-K.png" alt="Saat 11">
+            <h3>SOKA KADIN</h3>
+            <p>₺869</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+        <div class="product-card">
+            <img src="img/images (1).jpeg" alt="Saat 12">
+            <h3>SOKA ERKEK</h3>
+            <p>₺799</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img/514t7gJ2QgL._AC_SX522_.jpg" alt="Saat 13">
+            <h3>SOKA DİJİTAL</h3>
+            <p>₺1299</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+        <div class="product-card">
+            <img src="img/nacar-beyaz-deri-kadin-kol-saati-1368_5611_R3.jpg" alt="Saat 14">
+            <h3>SOKA KADIN</h3>
+            <p>₺939</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+        <div class="product-card">
+            <img src="img/spor-nacar-siyah-erkek-kol-saati3792_9845_R5.jpg" alt="Saat 15">
+            <h3>SOKA ERKEK</h3>
+            <p>₺1599</p>
+            <button class="buy-button">Satın Al</button>
+        </div>
+
+<div id="purchaseModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <img id="productImage" src="" alt="Saat" style="width: 150px; border-radius: 10px;">
+        <div>
+          <h2 id="productName">Saat Adı</h2>
+          <label>Adet:</label>
+          <input type="number" id="quantity" min="1" value="1" style="width: 60px; margin-bottom: 15px;"><br>
+          <input type="text" placeholder="Kart Numarası"><br>
+          <input type="text" placeholder="Son Kullanma Tarihi (AA/YY)"><br>
+          <input type="text" placeholder="CVC"><br><br>
+          <button>Ödeme Yap</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    </div>
+    <div id="successModal" class="modal">
+  <div class="modal-content" style="text-align: center;">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Ödeme Tamamlandı</h2>
+    <p>Satın alma işleminiz başarıyla gerçekleşti. Teşekkür ederiz!</p>
+  </div>
+</div>
+
+    <div id="iletisim" class="footer">
+        <p>&copy; 2025 SOKA Saat Mağazası | Tüm hakları saklıdır.</p>
+        <p>&copy; hakancosgun148@gmail.com</p>
+        <p>&copy; 0 (850) 434 05 55</p>
+        <p>&copy; Satınlama İle İlgli Bütün Sıkıntılarınızı Yazabilirsiniz</p>
+    </div>
+    <script>
+  const modal = document.getElementById("purchaseModal");
+  const productNameText = document.getElementById("productName");
+  const productImage = document.getElementById("productImage");
+
+  document.querySelectorAll('.product-card button').forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.parentElement;
+      const productName = card.querySelector("h3").textContent;
+      const productImgSrc = card.querySelector("img").getAttribute("src");
+
+      productNameText.textContent = productName;
+      productImage.src = productImgSrc;
+
+      modal.style.display = "block";
+    });
+  });
+
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  };
+
+  document.querySelector("#purchaseModal button").addEventListener("click", () => {
+    const cardNumber = document.querySelector('#purchaseModal input[placeholder="Kart Numarası"]').value;
+    const expiry = document.querySelector('#purchaseModal input[placeholder="Son Kullanma Tarihi (AA/YY)"]').value;
+    const cvc = document.querySelector('#purchaseModal input[placeholder="CVC"]').value;
+    const quantity = document.getElementById("quantity").value;
+
+    if (!cardNumber || !expiry || !cvc || quantity < 1) {
+      alert("Lütfen tüm kutuları doldurun.");
+      return;
+    }
+
+    alert("Ödeme Tamamlandı!");
+    modal.style.display = "none";
+  });
+</script>
+
+      
+    
+
+</body>
+</html>
